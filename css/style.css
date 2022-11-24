@@ -1,0 +1,551 @@
+* {
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+/* loginMain */
+.commentslists {
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  background-color: white;
+  padding: 120px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: white;
+  color: gray;
+  transform: rotateY(180deg);
+}
+
+.text_line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  height: 7em;
+  font-size: 20px;
+}
+
+.title_line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  height: 2.5em;
+}
+.name_line {
+  width: 300px;
+  padding: 0 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* nav bar */
+#navBtn {
+  border: 1px solid gray;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
+
+#navBtn:hover {
+  background-color: #fff;
+}
+
+#navBtn- {
+  text-decoration: none;
+  color: black;
+}
+
+#profilebox {
+  width: 150px;
+}
+
+.nav_btn {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.nav_btn:hover {
+  background-color: gray;
+}
+
+.nav_item {
+  display: none;
+  width: 140px;
+  height: 80px;
+  background-color: #fff;
+  list-style: none;
+}
+
+#nav-box {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+#nav-box:hover {
+  background-color: gray;
+}
+
+#nav-line {
+  text-decoration: none;
+  color: black;
+}
+
+.opener {
+  display: none;
+}
+
+.opener:checked ~ .nav_item {
+  display: block;
+}
+
+.opener:checked ~ .nav_item {
+  display: block;
+}
+
+/* auth */
+#authPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.authInput {
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.socialBtns {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#socialbtn {
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+}
+
+#socialbtn:hover {
+  transform: scale(1.2);
+}
+
+#authToggle {
+  background-color: #fff;
+  margin: 10px 0;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: 5px;
+}
+
+#authToggle:hover {
+  transform: scale(1.2);
+}
+
+#autBtnSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#authWrapper {
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgb(235, 233, 234);
+  min-width: 350px;
+}
+
+#authTitle {
+  text-align: center;
+  font-size: large;
+}
+
+#authBtn {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+#authBtn:hover {
+  transform: scale(1.2);
+}
+#socialbtn {
+  margin-top: 10px;
+}
+#socialbtn > button {
+  height: 55px;
+  width: 110px;
+}
+.githubBtn img {
+  object-fit: contain;
+}
+.googleBtn img {
+  object-fit: cover;
+}
+
+/* review style */
+.postNav {
+  height: 100px;
+  display: flex;
+  justify-content: right;
+}
+.postNav #goMainBtn {
+  margin: 5px;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin-left: 20px;
+}
+
+.post-container {
+  width: 50%;
+  height: 600px;
+  margin: auto;
+  border: 1px solid gray;
+  padding: 50px 50px;
+  margin-top: 50px;
+  display: none;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+}
+#nickname {
+  margin-left: 10px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+.form-floating {
+  margin-bottom: 25px;
+}
+
+.form-floating label {
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+#submitBtn {
+  display: flex;
+  float: right;
+  border-radius: 20px;
+  padding: 5px 30px;
+}
+
+.updateBtns {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.noDisplay {
+  display: none;
+}
+.updateBtn {
+  min-width: 70px;
+}
+
+#my-review-list {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.cmtImg {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.my-review-container {
+  width: 100%;
+  margin: auto;
+}
+.my-review-btn {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+#writeBtn {
+  width: 150px;
+  margin: 30px;
+  border-radius: 20px;
+}
+/* 카드 디자인 */
+.my-comment-card {
+  max-width: 1400px;
+  margin: 50px auto 0;
+}
+.my-card-body {
+  background-size: cover;
+  background: 20% 1% / cover no-repeat;
+  background-color: white;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(164, 164, 164, 0.5),
+    0 15px 12px rgba(164, 164, 164, 0.3);
+  margin-bottom: 50px;
+  float: left;
+  padding: 0 1.3rem;
+  width: 550px;
+}
+.my-card-body:hover .my-content {
+  background: linear-gradient(to top, black, 20%, rgba(0, 0, 0, 0));
+  transform: translateY(40px);
+}
+.option-card {
+  margin: 0 5px;
+  position: relative;
+  float: right;
+  font-size: 24px;
+}
+.my-card-body:hover .option-card span {
+  transform: translate(-50%, -10px);
+  opacity: 1;
+}
+.my-card-body .my-cmtAt {
+  float: left;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 500;
+  color: white;
+}
+.my-card-body .my-nick-n {
+  font-size: 12px;
+}
+.option-card span {
+  transition: all 0.3s;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: "Open Sans";
+  transform: translate(-50%, 0);
+}
+.my-mb-0 {
+  color: white;
+  transform: translateY(calc(200px + 4em));
+}
+.my-card-body .my-title {
+  margin-top: 10px;
+  color: white;
+}
+.my-card-body .my-review-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 70px;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.my-card-body .my-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(70px + 1em));
+  transition: transform 0.3s;
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+}
+.my-card-body #my-card-btn {
+  display: flex;
+  width: 120px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  line-height: 1;
+  position: relative;
+  font-weight: 700;
+}
+.my-card-body #my-card-btn::after {
+  content: "\2192";
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+.my-card-body #my-card-btn:hover .my-card-body #my-card-btn::after {
+  transform: translate(5px, -50%);
+  opacity: 1;
+}
+
+/* profile */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.show {
+  display: block;
+}
+.modal_body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  height: 650px;
+
+  text-align: center;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+
+  transform: translateX(-50%) translateY(-50%);
+}
+#profile-form {
+  border-radius: 20px;
+  width: 400px;
+  height: 600px;
+  position: fixed;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.profile-home {
+  position: absolute;
+}
+#profile-form h1 {
+  text-align: center;
+  position: absolute;
+  top: 30px;
+  left: 130px;
+}
+#prof-img {
+  width: 250px;
+  height: 250px;
+  border: 5px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 130px;
+  right: 69px;
+}
+.profile-camera {
+  margin-left: 200px;
+  position: absolute;
+  top: 380px;
+  right: 75px;
+}
+#profileNickname {
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  position: absolute;
+  top: 410px;
+  right: 98px;
+}
+#profileNickname::placeholder {
+  color: #bec3c9;
+}
+#profileNickname[type="text"]::placeholder {
+  font-family: "Material Icons Outlined";
+}
+#profileNickname:hover {
+  border-color: aquamarine;
+}
+#btnSave {
+  background-color: #bec3c9;
+  width: 120px;
+  height: 30px;
+  border: 1px solid #bec3c9;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  position: center;
+  top: 470px;
+  right: 175px;
+}
+#btnSave:hover {
+  background-color: #555b63;
+}
+.btn-gear {
+  margin-right: 5px;
+}
+#removeModal {
+  margin-top: 10px;
+  border: none;
+  border-radius: 50%;
+  float: right;
+  margin-right: 20px;
+}
+
+#profileImg {
+  border-radius: 30px;
+}
