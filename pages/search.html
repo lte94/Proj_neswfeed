@@ -1,0 +1,36 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#loginMain" onclick="route(event)">
+            <img src="/assets/favicon.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            그 영화 재밌어?
+        </a>
+
+        <section id="profilebox">
+            <img id="profileImg" width="50px" height="50px" margin-right="0px" src="/assets/blank_profile.png">
+            <label class="nav_btn" for="opener">▼</label>
+            <input class="opener" type="checkbox" id="opener">
+            <div class="nav_item">
+                <li id="nav-box">
+                    <a id="nav-line" href="#loginMain" onclick="window.handleClickModal(event)">프로필 수정</a>
+                </li>
+                <li id="nav-box"><a id="nav-line" href="#review" onclick="route(event)">내 블로그</a></li>
+                <li id="nav-box"><a id="nav-line" href="#main" onclick="logout()">로그아웃</a></li>
+            </div>
+        </section>
+    </div>
+</nav>
+
+
+<div class="search-container">
+    <div class="search-box">
+        <input id="inputSearch" class="search-bar" type="text" placeholder="제목를 동일하게 입력하세요" />
+        <button id="searchBtn" onclick="searchBar()">
+            <img src="/assets/search-icon.png">
+        </button>
+    </div>
+
+
+    <div class="suggestions-container">
+        <ul id="listOn" class="suggestions-list"></ul>
+    </div>
+</div>

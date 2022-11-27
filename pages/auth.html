@@ -1,0 +1,62 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" onclick="route(event)">
+      <img
+        src="/assets/favicon.png"
+        alt=""
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top"
+      />
+      그 영화 재밌어?
+    </a>
+  </div>
+</nav>
+
+<div id="authPage">
+  <div id="authWrapper">
+    <div id="authTitle">로그인 페이지</div>
+    <form onsubmit="handleAuth(event)">
+      <div class="authInput">
+        <div>이메일</div>
+        <input id="email" type="text" />
+      </div>
+      <div class="authInput">
+        <div>비밀번호</div>
+        <input id="pw" type="password" />
+      </div>
+      <section id="authBtnSection">
+        <input type="submit" id="authBtn" value="로그인" />
+        <button id="authToggle" onclick="onToggle()">회원가입</button>
+      </section>
+    </form>
+    <section class="socialBtns">
+      <button
+        id="socialbtn"
+        class="googleBtn"
+        name="google"
+        onclick="socialLogin(event)"
+      >
+        <img
+          name="google"
+          src="assets/google-icon.png"
+          height="55"
+          width="90"
+        />
+      </button>
+      <button
+        id="socialbtn"
+        class="githubBtn"
+        name="github"
+        onclick="socialLogin(event)"
+      >
+        <img
+          name="github"
+          src="assets/github-icon.png"
+          height="55"
+          width="90"
+        />
+      </button>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" onclick="route(event)">
+      <img
+        src="/assets/favicon.png"
+        alt=""
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top"
+      />
+      그 영화 재밌어?
+    </a>
+
+    <button id="navBtn">
+      <a id="navBtn-" href="#auth" onclick="route(event)">로그인/회원가입</a>
+    </button>
+  </div>
+</nav>
+
+<div id="banner_text">
+  <h1 class="banner_title">
+    <img
+      src="/assets/favicon.png"
+      alt=""
+      width="30"
+      height="60"
+      class="d-inline-block align-text-top"
+    />주관적인 영화리뷰
+  </h1>
+  <h3 class="banner_text">
+    '영화'를 재미있게 보셨나요? 영화의 어떤 점이 좋았는지 이야기해주세요.
+  </h3>
+</div>
+
+<div class="commentslists"></div>
+<div id="all-review-container">
+  <div class="all-review-modal">
+    <div class="all-review-modal-body">
+      <button onclick="closeReview()" id="removeModal">X</button>
+      <div id="all-review-content"></div>
+    </div>
+  </div>
+</div>

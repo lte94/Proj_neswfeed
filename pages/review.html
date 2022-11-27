@@ -1,0 +1,60 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#loginMain" onclick="route(event)">
+            <img src="/assets/favicon.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            그 영화 재밌어?
+        </a>
+
+
+        <div class="writeSection">
+            <a href="#search" onclick="route(event)"
+                style="background-image: url(../assets/search-icon.png);background-size:contain;background-repeat:no-repeat;width:50px;height: 50px;">
+
+            </a>
+
+            <button id="gotoMain">
+                <a class="goBtn" href="#loginMain" onclick="route(event)">HOME</a>
+            </button>
+
+
+            <section id="profilebox">
+                <img id="profileImg" width="50px" height="50px" margin-right="0px" src="/assets/blank_profile.png">
+                <label class="nav_btn" for="opener">▼</label>
+                <input class="opener" type="checkbox" id="opener">
+                <div class="nav_item">
+                    <li id="nav-box">
+                        <a id="nav-line" href="#review" onclick="window.handleClickModal(event)">프로필 수정</a>
+                    </li>
+                    
+                    <li id="nav-box"><a id="nav-line" href="#main" onclick="logout()">로그아웃</a></li>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</nav>
+
+<div class="my-review-container">
+    <div class="my-review-btn">
+        <input type="button" class="btn btn-secondary" type="submit" id="writeBtn" value="글쓰기" onclick="writeToggle()">
+    </div>
+    <div class="post-container" id="writePost">
+        <div class="mb-3">
+            <input id="movieImg" class="form-control" onchange="uploadImage(event)" type="file" id="formFileMultiple"
+                multiple>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="movieTitle"></textarea>
+            <label id="movieTitle" for="floatingTextarea">영화의 제목을 입력하세요.</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="review"
+                style="height: 300px"></textarea>
+            <label id=review for="floatingTextarea2">리뷰를 작성해주세요.</label>
+        </div>
+        <input id="submitBtn" class="btn btn-secondary" type="submit" value="작성완료" onclick="save_review(event)">
+    </div>
+    <div id="my-review-list">
+
+    </div>
+</div>
